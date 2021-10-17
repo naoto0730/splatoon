@@ -13,10 +13,10 @@ info.onCountdownEnd(function () {
     game.showLongText(player1の点数, DialogLayout.Bottom)
     game.showLongText(player2の点数, DialogLayout.Bottom)
     if (player1の点数 < player2の点数) {
-        game.showLongText("player2の勝ち！", DialogLayout.Bottom)
+        game.showLongText("青の勝ち！", DialogLayout.Bottom)
         game.over(false)
     } else if (player1の点数 > player2の点数) {
-        game.showLongText("player1の勝ち！", DialogLayout.Bottom)
+        game.showLongText("赤の勝ち！", DialogLayout.Bottom)
         game.over(false)
     } else if (player1の点数 == player2の点数) {
         game.showLongText("引き分け！", DialogLayout.Bottom)
