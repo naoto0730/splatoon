@@ -13,17 +13,20 @@ info.onCountdownEnd(function () {
     game.showLongText(player1の点数, DialogLayout.Bottom)
     game.showLongText(player2の点数, DialogLayout.Bottom)
     if (player1の点数 < player2の点数) {
-    	
-    } else if (false) {
-    	
-    } else {
-    	
+        game.showLongText("player2の勝ち！", DialogLayout.Bottom)
+        game.over(false)
+    } else if (player1の点数 > player2の点数) {
+        game.showLongText("player1の勝ち！", DialogLayout.Bottom)
+        game.over(false)
+    } else if (player1の点数 == player2の点数) {
+        game.showLongText("引き分け！", DialogLayout.Bottom)
+        game.over(false)
     }
 })
 let player2の点数 = 0
 let player1の点数 = 0
 let 背景画像: Image = null
-info.startCountdown(10)
+info.startCountdown(30)
 tiles.setTilemap(tilemap`レベル2`)
 背景画像 = img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
